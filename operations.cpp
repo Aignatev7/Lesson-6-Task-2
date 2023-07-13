@@ -1,4 +1,6 @@
 #include "operations.h"
+#include <iostream>
+#include <string>
 
 void operations(Counter& count)
 {
@@ -24,7 +26,7 @@ void operations(Counter& count)
 		if (op == 'x')
 		{
 			std::cout << "До свидания!" << std::endl;
-			break;
+			/*break;*/
 		}
 	} while (op != 'x');
 }

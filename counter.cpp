@@ -1,38 +1,27 @@
-#include <iostream>
 #include "counter.h"
 
-class Counter
+Counter::Counter(unsigned int initial_counter)								//это конструктор с параметром
 {
-private:
-	unsigned int initial_counter;
+	this->initial_counter = initial_counter;
+}
 
-public:
+Counter::Counter()													//это конструктор без параметров
+{
+	this->initial_counter = 1;
+}
 
-	Counter(unsigned int initial_counter)								//это конструктор с параметром
-	{
-		this->initial_counter = initial_counter;
-	}
+unsigned Counter::get_initial_counter()
+{
+	return initial_counter;
+}
 
-	Counter()															//это конструктор без параметров
-	{
-		this->initial_counter = 1;
-	}
+void Counter::plus()
+{
+	this->initial_counter++;
+}
 
-	unsigned get_initial_counter()
-	{
-		return initial_counter;
-	}
-
-	void plus()
-	{
-		this->initial_counter++;
-	}
-
-	void minus()
-
-	{
-		this->initial_counter--;
-	}
-};
-
+void Counter::minus()
+{
+	this->initial_counter--;
+}
 
